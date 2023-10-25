@@ -3,13 +3,13 @@
 
 	<groupId>org.kuhlins.natives</groupId>
 	<artifactId>tk-natives-jre-win64</artifactId>
-	<version>21.0.0-SNAPSHOT</version>
+	<version>21.0.0</version>
 
 	<scm>
 		<url>https://github.com/thomaskuh/tk-natives-jre-win64</url>
 		<connection>scm:git:git://github.com/thomaskuh/tk-natives-jre-win64.git</connection>
 		<developerConnection>scm:git:git@github.com:thomaskuh/tk-natives-jre-win64.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>release/21.0.0</tag>
 	</scm>
 	
 	<distributionManagement>
