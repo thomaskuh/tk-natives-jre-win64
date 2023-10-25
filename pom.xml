@@ -3,9 +3,56 @@
 
 	<groupId>org.kuhlins.natives</groupId>
 	<artifactId>tk-natives-jre-win64</artifactId>
-	<version>17.0.4</version>
+	<version>21.0.0-SNAPSHOT</version>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+	<scm>
+		<url>https://github.com/thomaskuh/tk-natives-jre-win64</url>
+		<connection>scm:git:git://github.com/thomaskuh/tk-natives-jre-win64.git</connection>
+		<developerConnection>scm:git:git@github.com:thomaskuh/tk-natives-jre-win64.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+	
+	<distributionManagement>
+		<repository>
+			<id>nexus.kuhlins.org</id>
+			<url>https://nexus.kuhlins.org/repository/maven-public</url>
+		</repository>
+	</distributionManagement>
+	
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.11.0</version>
+					<configuration>
+						<release>8</release>
+						<encoding>UTF-8</encoding>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>3.3.1</version>
+					<configuration>
+						<encoding>UTF-8</encoding>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>3.3.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>3.0.1</version>
+					<configuration>
+						<tagNameFormat>release/@{project.version}</tagNameFormat>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 </project>
